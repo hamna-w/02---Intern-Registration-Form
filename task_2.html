@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration Form</title>
+</head>
+<body>
+
+    <header>
+        <h1>Tech Internship Registration</h1>
+        <p>Welcome! Please complete the registration form below to apply for our upcoming internship. Review the program schedule and curriculum table at the bottom of the page before submitting.</p>
+        <hr>
+    </header>
+
+    <main>
+        <section>
+            <h2>Applicant Registration Form</h2>
+            
+            <form action="#" method="post" enctype="multipart/form-data">
+
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <p>
+                        <label for="first-name">First Name:</label><br>
+                        <input type="text" id="first-name" name="first_name" placeholder="Write you First Name.." autocomplete="given-name" size="30" required>
+                    </p>
+
+                    <p>
+                        <label for="last-name">Last Name:</label><br>
+                        <input type="text" id="last-name" name="last_name" placeholder="Write you Last Name..." autocomplete="family-name" size="30" required>
+                    </p>
+
+                    <p>
+                        <label for="dob">Date of Birth:</label><br>
+                        <input type="date" id="dob" name="dob" autocomplete="bday" min="1990-01-01" max="2008-12-31" required>
+                    </p>
+
+                    <p>
+                        <label for="email">Email Address:</label><br>
+                        <input type="email" id="email" name="email" placeholder="Example@gmail.com" autocomplete="email" size="35" required>
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone Number </label><br>
+                        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" autocomplete="tel" required>
+                    </p>
+
+                    <p>
+                        <label for="password">Create Password:</label><br>
+                        <input type="password" id="password" name="password" placeholder="Minimum 8 characters" autocomplete="new-password" minlength="8" size="30" required>
+                    </p>
+
+                    <p>
+                        <label for="address">Current Mailing Address</label><br>
+                        <textarea id="address" name="address" rows="4" cols="45" placeholder="Enter your street address, city, postal code, and any accommodation notes..." autocomplete="street-address" required></textarea>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Schedule &amp; Program Preferences</legend>
+
+                    <p>
+                        <label for="track-search">Search Available Tracks:</label><br>
+                        <input type="search" id="track-search" name="track_search" placeholder="Search keywords (e.g., Frontend, AI)..." size="35">
+                    </p>
+<br>
+                    <p>
+                        <label for="milestone"><strong>Current Academic Milestone:</strong></label><br>
+                        <select id="milestone" name="milestone" required>
+                            <option value="">-- Select Your Current Status --</option>
+                            <option value="freshman">Undergraduate - Freshman</option>
+                            <option value="junior" selected>Undergraduate - Junior / Senior</option>
+                            <option value="grad">Graduate / Master's Student</option>
+                            <option value="bootcamp">Coding Bootcamp Graduate</option>
+                        </select>
+                    </p>
+<br>
+                    <p>
+                        <label for="department"><strong> Internship Department (Hold Ctrl/Cmd to select multiple)</strong></label><br>
+                        <select id="department" name="department" multiple size="6" required>
+                            <optgroup label="Software Engineering">
+                                <option value="frontend">Frontend Web Development</option>
+                                <option value="backend">Backend &amp; API Systems</option>
+                                <option value="mobile">Mobile App Development</option>
+                            </optgroup>
+                            <optgroup label="Data &amp; Infrastructure">
+                                <option value="data-science">Data Science &amp; Analytics</option>
+                                <option value="cloud">Cloud &amp; DevOps</option>
+                            </optgroup>
+                        </select>
+                    </p>
+<br>
+                    <p>
+                        <label for="interview-time"><strong>Preferred Interview Time (Between 09:00 and 17:00):</strong></label><br>
+                        <input type="time" id="interview-time" name="interview_time" min="09:00" max="17:00" required>
+                    </p>
+<br>
+                    <p>
+                        <label for="training-month"><strong>Training Start Month: </strong><br>
+                        <input type="month" id="training-month" name="training_month" min="2026-05" max="2026-09" required>
+                    </p>
+
+                    <p>
+                        <label for="training-week">Preferred Orientation Week:</label><br>
+                        <input type="week" id="training-week" name="training_week" min="2026-W20" max="2026-W38">
+                    </p>
+
+                    <p>
+                        <label for="badge-color">Preferred Intern Badge Color:</label><br>
+                        <input type="color" id="badge-color" name="badge_color" value="#1e90ff">
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Skills, Portfolio &amp; Documents</legend>
+
+                    <p>
+                        <label for="portfolio">Portfolio or GitHub URL:</label><br>
+                        <input type="url" id="portfolio" name="portfolio" placeholder="https://github.com/yourusername" autocomplete="url" size="40" required>
+                    </p>
+
+                    <p>
+                        <label for="skill-level">Self-Assessed Coding Proficiency (1 = Beginner, 10 = Expert):</label><br>
+                        <input type="range" id="skill-level" name="skill_level" min="1" max="10" step="1" value="5">
+                    </p>
+
+                    <p>Select Your Technical Skills (Check all that apply):</p>
+                    <p>
+                        <input type="checkbox" id="skill-html" name="skills" value="html" checked>
+                        <label for="skill-html">HTML5</label><br>
+
+                        <input type="checkbox" id="skill-python" name="skills" value="python">
+                        <label for="skill-python">Python</label><br>
+
+                        <input type="checkbox" id="skill-sql" name="skills" value="sql">
+                        <label for="skill-sql">SQL &amp; Databases</label><br>
+
+                        <input type="checkbox" id="skill-git" name="skills" value="git">
+                        <label for="skill-git">Git &amp; Version Control</label>
+                    </p>
+
+                    <p>
+                        <label for="resume">Upload Resume / CV:</label><br>
+                        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                    </p>
+                </fieldset>
+
+                <br>
+
+              
+                <fieldset>
+                    <legend>Declaration &amp; Submission</legend>
+
+                    <p>
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms"><strong>I confirm that all information provided is accurate and I agree to the Internship Terms &amp; Conditions.</strong></label>
+                    </p>
+
+                    <p>
+                        <button type="submit">Submit Application</button>
+                        <button type="reset">Clear Form</button>
+                    </p>
+                </fieldset>
+
+            </form>
+        </section>
+
+        <br>
+        <hr>
+
+
+        <section>
+            <h2>Internship Training Curriculum Summary</h2>
+            <p>Below is the structured overview of the mandatory training modules included during the 12-week internship program.</p>
+
+            <table border="1" cellpadding="8" cellspacing="0">
+                <caption>2026 Internship Core Training Modules &amp; Credit Breakdown</caption>
+                
+                <colgroup>
+                    <col span="1">
+                    <col span="2">
+                    <col span="1">
+                </colgroup>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Module Code</th>
+                        <th scope="col">Course Title</th>
+                        <th scope="col">Primary Focus Area</th>
+                        <th scope="col">Training Hours</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>INT-101</td>
+                        <td>Web Foundations &amp; Semantic HTML</td>
+                        <td>Document Structure, Forms &amp; Accessibility</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>INT-102</td>
+                        <td>Version Control &amp; Team Workflows</td>
+                        <td>Git Branching, Pull Requests &amp; Code Reviews</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>INT-103</td>
+                        <td>Database Design &amp; Querying</td>
+                        <td>Relational Schemas &amp; SQL Optimization</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>INT-104</td>
+                        <td>Capstone Team Project</td>
+                        <td>End-to-End Application Deployment</td>
+                        <td>40</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="3">Total Mandatory Training Hours</th>
+                        <td><strong>100 Hours</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p><small>&copy; 2026 Tech Internships Program. All rights reserved.</small></p>
+    </footer>
+
+</body>
+</html>
